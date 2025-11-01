@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio of Tanishka Soni</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth; /* Enables smooth scroll globally */
+    }
+
+    body {
+      font-family: "Poppins", sans-serif;
+      background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+      color: #1a1a1a;
+      overflow-x: hidden;
+    }
+
+    /* Navbar */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #1e293b;
+      color: white;
+      padding: 1rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .navbar h1 {
+      font-size: 1.8rem;
+      color: #38bdf8;
+      text-shadow: 0 0 10px #38bdf8;
+    }
+
+    .navbar ul {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    .navbar a:hover {
+      color: #38bdf8;
+      text-shadow: 0 0 10px #38bdf8;
+    }
+
+    /* Home Section */
+    .home {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 5rem 2rem;
+      flex-wrap: wrap;
+      background: #f8fafc;
+    }
+
+    .home img {
+      width: 260px;
+      height: 290px;
+      border-radius: 50%;
+      box-shadow: 0 0 25px rgba(56, 189, 248, 0.5);
+      animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    .text {
+      max-width: 500px;
+      margin: 2rem;
+      text-align: center;
+      animation: fadeIn 1.5s ease-in;
+    }
+
+    .text h3 {
+      font-size: 1.3rem;
+      line-height: 1.8rem;
+      color: #0f172a;
+    }
+
+    .highlight {
+      color: #0ea5e9;
+      font-weight: bold;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* About Section */
+    .about {
+      padding: 5rem 2rem;
+      text-align: center;
+      background-color: #e0f2fe;
+    }
+
+    .about h1 {
+      font-size: 2.5rem;
+      color: #0ea5e9;
+      margin-bottom: 1.5rem;
+    }
+
+    .about h3 {
+      font-size: 1.2rem;
+      color: #1e293b;
+      line-height: 1.8rem;
+    }
+
+    /* Skills Section */
+    .skills {
+      padding: 5rem 2rem;
+      background-color: #f0f9ff;
+      text-align: center;
+    }
+
+    .skills h1 {
+      font-size: 2.5rem;
+      color: #0284c7;
+      margin-bottom: 2rem;
+    }
+
+    .skill-grid {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+
+    .skill-card {
+      background-color: white;
+      border-radius: 15px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      width: 200px;
+      padding: 1.5rem;
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+      cursor: pointer;
+    }
+
+    .skill-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    }
+
+    .skill-card img {
+      width: 60px;
+      height: 60px;
+    }
+
+    .skill-card p {
+      margin-top: 1rem;
+      color: #0f172a;
+      font-size: 1rem;
+    }
+
+    /* Contact Section */
+    .contact {
+      padding: 4rem 2rem;
+      text-align: center;
+      background-color: #e0f2fe;
+    }
+
+    .contact h1 {
+      font-size: 2.5rem;
+      color: #0284c7;
+      margin-bottom: 1rem;
+    }
+
+    .contact-info a img {
+      width: 60px;
+      margin: 10px;
+      transition: transform 0.3s;
+    }
+
+    .contact-info a:hover img {
+      transform: scale(1.2);
+    }
+
+    @media (max-width: 768px) {
+      .home {
+        flex-direction: column;
+      }
+
+      .text h3 {
+        font-size: 1rem;
+      }
+
+      .navbar ul {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar">
+    <h1>Portfolio</h1>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Home -->
+  <section id="home" class="home">
+    <img src="Tanishka.jpg" alt="Profile Image">
+    <div class="text">
+      <h3>
+        👋 Hello, It's Me <span class="highlight">Tanishka Soni</span><br><br>
+        ☕ Currently Learning <span class="highlight">Full Stack & Java</span><br>
+        🚀 Passionate about <span class="highlight">building modern web experiences</span>
+      </h3>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="about">
+    <h1>About Me</h1>
+    <h3>
+      I’m <b class="highlight">Tanishka Soni</b>, pursuing my B.Tech in Computer Science (2023–2027)
+      from <b>Govt. Engineering College, Jhalawar</b>.<br><br>
+      I love learning about technology and creating user-friendly digital solutions.<br>
+      Currently, I’m sharpening my skills in Java and Full-Stack Development.
+    </h3>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="skills">
+    <h1>Skills</h1>
+    <div class="skill-grid">
+      <div class="skill-card" onclick="scrollToSection('about')">
+        <img src="icons8-react-40.png" alt="React">
+        <p>React – Building interactive UIs</p>
+      </div>
+      <div class="skill-card" onclick="scrollToSection('about')">
+        <img src="icons8-java-logo-48.png" alt="Java">
+        <p>Java – Basics & OOP concepts</p>
+      </div>
+      <div class="skill-card" onclick="scrollToSection('about')">
+        <img src="icons8-javascript-logo-100.png" alt="JavaScript">
+        <p>JavaScript – Logic & DOM manipulation</p>
+      </div>
+      <div class="skill-card" onclick="scrollToSection('about')">
+        
+        <p>HTML & CSS – Website structure & design</p>
+      </div>
+      <div class="skill-card" onclick="scrollToSection('about')">
+        <img src="icons8-nodejs-48.png" alt="Node.js">
+        <p>Node.js – Server-side JavaScript</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="contact">
+    <h1>Contact</h1>
+    <div class="contact-info">
+      <a href="https://www.linkedin.com/in/tanishka-soni-5a1aa2279" target="_blank">
+        <img src="linkedin-brands-solid-full.svg" alt="LinkedIn">
+      </a>
+      <a href="https://github.com/Tanishoni" target="_blank">
+        <img src="github-brands-solid.svg" alt="GitHub">
+      </a>
+      <a href="mailto:tanishkasoni2504@gmail.com">
+        <img src="icons8-mail-48.png" alt="Email">
+      </a>
+    </div>
+  </section>
+
+  <script>
+    // JS for smooth scrolling on older browsers
+    document.querySelectorAll('.navbar a').forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href').substring(1);
+        document.getElementById(targetId).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+
+    // Smooth scroll when clicking skill cards
+    function scrollToSection(id) {
+      document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
+</body>
+</html>
